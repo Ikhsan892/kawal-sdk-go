@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"os"
 
-	kawal "github.com/Ikhsan892/kawal/sdk/go"
+	kawal "github.com/Ikhsan892/kawal-sdk-go"
 )
 
 func Example() {
