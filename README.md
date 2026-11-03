@@ -3,11 +3,11 @@
 Client for Kawal's `POST /api/v1/authorize`. Standard library only.
 
 ```sh
-go get github.com/Ikhsan892/kawal/sdk/go@latest
+go get github.com/Ikhsan892/kawal-sdk-go@latest
 ```
 
 ```go
-import kawal "github.com/Ikhsan892/kawal/sdk/go"
+import kawal "github.com/Ikhsan892/kawal-sdk-go"
 
 c := kawal.New("http://kawal:3999", kawal.WithARNPrefix("kawal", "main", "default"))
 
@@ -37,12 +37,12 @@ Deny returns 403. If Kawal is unreachable it returns 503. The handler reads the 
 
 ## Options
 
-| Option | Default |
-|---|---|
-| `WithHTTPClient(hc)` | 5s timeout |
-| `WithToken(t)` | none (sent as `Authorization: Bearer`) |
-| `WithARNPrefix(partition, region, account)` | `kawal`, `main`, `default` |
-| `WithRetry(n)` | 1 (only on network errors and 502/503/504) |
+| Option                                      | Default                                    |
+| ------------------------------------------- | ------------------------------------------ |
+| `WithHTTPClient(hc)`                        | 5s timeout                                 |
+| `WithToken(t)`                              | none (sent as `Authorization: Bearer`)     |
+| `WithARNPrefix(partition, region, account)` | `kawal`, `main`, `default`                 |
+| `WithRetry(n)`                              | 1 (only on network errors and 502/503/504) |
 
 ## Releasing
 
